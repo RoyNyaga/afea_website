@@ -1,3 +1,10 @@
+/*
+font families
+font-family: 'Niconne', cursive;
+font-family: 'Cantarell', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
 *{
 	margin: 0;
 	padding: 0;
@@ -219,26 +226,30 @@ nav{
 /*services*/
 .services{
 	padding: 50px;
-	background: url(img/photo-1460131548611-36aac9b6a901.jpeg);
 	background-position: cover;
 	background-attachment: fixed;
 	background-repeat: repeat;
 	}
 
 	.fa-cogs {
-		color: green;
+		color: #ed4d65;
 		font-size: 2.5em;
 		margin-bottom: 20px;
 	}
 
 .service-content h3{
 	text-decoration: underline;
+    color: #740229;
 }
 
 .service-content p{
 	text-align: left;
+    color: #1e020c;
+    font-family: 'Roboto', sans-serif;
 }
-
+#service-content-title h1{
+    color: #740229;
+}
 #services-content-holder {
 	background: #ededf373;
 	padding: 10px;
@@ -246,14 +257,15 @@ nav{
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	grid-gap: 10px;
-	align-items: center;
+/*	align-content: start;*/
 	justify-items: center;
 	text-align: center;
 	max-width: 1400px;
 	margin: 0 auto;
 	grid-gap: 20px;
-	border: 2px solid #ededf373;
+	border: 2px solid #1e020c;
 	font-size: 1.5em;
+    border-radius: 12px;
 	}
 
 
@@ -487,22 +499,24 @@ footer p{
 	align-items: center;
 	justify-items: center;
 	padding: 50px;
+    font-family: 'Cantarell', sans-serif;
 }
  
 #motivation-contact{
 	font-size: 1.5em;
 	text-decoration: none;
 	padding: 3px 10px;
-	border: 2px solid #233652;
-	color: #0f1d24;
+	border: 2px solid white;
+	color: white;
 	border-radius: 50px;
 	width: 100%;
 	margin: 0 auto;
 	font-weight: bold;
+    font-family: 'Niconne', cursive;
 }
 
 #motivation-contact:hover {
-	background: #8db5c7;
+	background: #983f5a9e;
 }
 
 #motivation-content h1{
@@ -528,15 +542,10 @@ footer p{
 
 @media screen and (min-width: 660px){
 	#motivation-contact{
-	font-size: 1.5em;
-	text-decoration: none;
 	padding: 3px 10px;
-	border: 2px solid #233652;
-	color: #0f1d24;
 	border-radius: 0px;
 	width: 15%;
 	margin: 0 auto;
-	font-weight: bold;
 	}
 }
 
