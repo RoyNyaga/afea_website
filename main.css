@@ -225,10 +225,6 @@ nav{
 	background-repeat: repeat;
 	}
 
-	/*.service-content h1{
-		font-size: 1.6em;
-	}*/
-
 	.fa-cogs {
 		color: green;
 		font-size: 2.5em;
@@ -486,8 +482,8 @@ footer p{
 #motivation{
 	display: grid;
 	grid-template-columns: 1fr;
-	background: #dcdbeb;
-	color: black;
+	background: #1e020c;
+	color: white;
 	align-items: center;
 	justify-items: center;
 	padding: 50px;
