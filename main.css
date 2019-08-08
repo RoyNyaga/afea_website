@@ -257,7 +257,7 @@ nav{
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	grid-gap: 10px;
-/*	align-content: start;*/
+	align-items: start;
 	justify-items: center;
 	text-align: center;
 	max-width: 1400px;
@@ -275,9 +275,6 @@ nav{
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto;
 	grid-gap: 10px;
-	align-items: center;
-	justify-items: center;
-	text-align: center;
 	max-width: 1400px;
 	margin: 0 auto;
 	grid-gap: 20px;
