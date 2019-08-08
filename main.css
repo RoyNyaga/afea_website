@@ -35,7 +35,7 @@ nav ul a:hover{
 }
 
 .nav-container{
-	padding: 0 20px;
+	padding: 0 5px;
 	background: #474747;
 	border-bottom: 3px solid #ad343e;
 	display: flex;
@@ -58,11 +58,12 @@ nav ul a:hover{
 
 header{
 	min-height: 100vh;
-	/*background: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.1)), url(img/0lhB3x.jpg)center/cover fixed no-repeat;*/
-	background: url(img/0lhB3x.jpg);
-	background-position: cover;
+	background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.5)), url(img/hostessesinred.jpeg);
+	background-position: center;
+	background-size: cover;
 	background-attachment: fixed;
-	display: flex;
+	background-repeat: no-repeat;
+	display: flex;	
 	flex-direction: column;
 }
 nav{
@@ -88,30 +89,69 @@ nav{
 .banner h3{
 	text-transform: capitalize;
 	font-size: 30px;
-	color: #ad343e;
+	color: #efb1b6;
 	width: 100%;
-	padding: 20px 0;
-	margin: 0 auto;
+	padding: 10px 0;
+	margin: 5px auto;
+    border-top: 5px dotted #ed4d65;
+    border-bottom: 5px dotted #ed4d65;
+    opacity: 0;
+    animation: fromLeft;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.header-link{
+    position: relative;
+    bottom: 70px;
+    background: #25131f;
+    border-radius: 10px;
+    transition: all 1s ease;
+    animation: fromBottom;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    font-size: 35px;
+    color: #efb1b6;
+}
+.header-link:hover{
+    color: white;
+    font-size: 45px;
+}
+
+@keyframes fromBottom{
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+       transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fromLeft{
+    0%{
+        transform: translateX(-100px);
+    }
+    50%{
+        transform: translateX(100px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width: 760px){
 	.banner h3{
 	text-transform: capitalize;
 	font-size: 50px;
-	color: #ad343e;
 	width: 100%;
-	padding: 20px 0;
-	margin: 0 auto;
 	}
-
 }
-
-#line{
-	padding: 2px 0px;
-	width:50%;
-	margin: 0 auto;
-	background-color: red;
-	}
 
 .and {
 	color: #f5f3f5;
@@ -124,17 +164,23 @@ nav{
 .banner-icons a{
 	display: inline-block;
 	font-size: 30px;
-	background: #474747;
+    background: #25131f;
 	padding: 5px 10px;
 	margin: 0 10px;
 	border-radius: 50%;
-	color: #f5f3f5;
+	color: #efb1b6;
 	transition:  color 1s ease, transform 1s ease;
 }
 
 .banner-icons a:hover{
 	color: #ad343e;
 	transform: translateY(-10px);
+}
+
+.visible-logo {
+    opacity: 0.5;
+    width: 20%;
+    margin-bottom: 35px;
 }
 
 nav{
@@ -165,7 +211,7 @@ nav{
 
 /*services*/
 .services{
-	/*padding: 50px;*/
+	padding: 50px;
 	background: url(img/photo-1460131548611-36aac9b6a901.jpeg);
 	background-position: cover;
 	background-attachment: fixed;
@@ -192,7 +238,7 @@ nav{
 
 #services-content-holder {
 	background: #ededf373;
-	padding: 30px;
+	padding: 10px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
@@ -200,7 +246,7 @@ nav{
 	align-items: center;
 	justify-items: center;
 	text-align: center;
-	/*width: 100%;*/
+	max-width: 1400px;
 	margin: 0 auto;
 	grid-gap: 20px;
 	border: 2px solid #ededf373;
@@ -221,13 +267,6 @@ nav{
 	margin: 0 auto;
 	grid-gap: 20px;
 
-	}
-	.services{
-	padding: 50px;
-	background: url(img/photo-1460131548611-36aac9b6a901.jpeg);
-	background-position: cover;
-	background-attachment: fixed;
-	background-repeat: repeat;
 	}
 	
 }
