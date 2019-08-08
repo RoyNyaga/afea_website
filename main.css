@@ -178,6 +178,7 @@ nav{
 }
 
 .visible-logo {
+    display: none;
     opacity: 0.5;
     width: 20%;
     margin-bottom: 35px;
@@ -206,6 +207,12 @@ nav{
 	nav ul a:hover{
 		background: transparent;
 		padding-left: 20px;
+	}
+	.visible-logo {
+        display: inline;
+        opacity: 0.5;
+        width: 20%;
+        margin-bottom: 35px;
 	}
 }
 
