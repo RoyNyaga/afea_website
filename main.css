@@ -26,7 +26,7 @@ nav ul a{
 	font-size: 17px;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #ad343e;	
+	color: gold;	
 	transition: color 1s ease, background 1s ease, padding 1s ease;
 }
  
@@ -43,8 +43,8 @@ nav ul a:hover{
 
 .nav-container{
 	padding: 0 5px;
-	background: #474747;
-	border-bottom: 3px solid #ad343e;
+	background: #0b200c;
+	border-bottom: 3px solid #dcba04;
 	display: flex;
 	justify-content: space-between;
 }
@@ -53,19 +53,20 @@ nav ul a:hover{
 	width: 30px;
 	height: 3px;
 	margin: 7px;
-	background: #ad343e;
+	background: #2f2609;
 }
 
 .btn {
 	padding: 2px;
+    background: white;
 	display: inline-block;
-	border: 2px solid #ad343e;
+	border: 2px solid #c3a505;
 	align-self: center;
 }
 
 header{
 	min-height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.5)), url(img/hostessesinred.jpeg);
+	background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.5)), url(img/other-header-pic.jpeg);
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -73,8 +74,17 @@ header{
 	display: flex;	
 	flex-direction: column;
 }
+/*
 nav{
 	flex: 0 0 auto;
+}
+*/
+
+nav{
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+    flex: 0 0 auto;
 }
 
 .banner {
@@ -96,12 +106,13 @@ nav{
 .banner h3{
 	text-transform: capitalize;
 	font-size: 30px;
-	color: #efb1b6;
+    background: #080d119c;
+	color: darkgoldenrod;
 	width: 100%;
 	padding: 10px 0;
 	margin: 5px auto;
-    border-top: 5px dotted #ed4d65;
-    border-bottom: 5px dotted #ed4d65;
+    border-top: 5px dotted #bfc9bf;
+    border-bottom: 5px dotted #bfc9bf;
     opacity: 0;
     animation: fromLeft;
     animation-duration: 5s;
@@ -112,14 +123,15 @@ nav{
 .header-link{
     position: relative;
     bottom: 70px;
-    background: #25131f;
+    background: #0b200c;
+    border: 2px solid darkgoldenrod;
     border-radius: 10px;
-    transition: all 1s ease;
+    transition: all 1s ease-in-out;
     animation: fromBottom;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     font-size: 35px;
-    color: #efb1b6;
+    color: #bfc9bf;
 }
 .header-link:hover{
     color: white;
@@ -171,16 +183,16 @@ nav{
 .banner-icons a{
 	display: inline-block;
 	font-size: 30px;
-    background: #25131f;
+    background: #0b200c;
 	padding: 5px 10px;
 	margin: 0 10px;
 	border-radius: 50%;
-	color: #efb1b6;
+	color: #bfc9bf;
 	transition:  color 1s ease, transform 1s ease;
 }
 
 .banner-icons a:hover{
-	color: #ad343e;
+	color: darkgoldenrod;
 	transform: translateY(-10px);
 }
 
@@ -191,11 +203,6 @@ nav{
     margin-bottom: 35px;
 }
 
-nav{
-	position: fixed;
-	width: 100%;
-	z-index: 10;
-}
 
 @media screen and (min-width: 776px){
 	.nav-container{
@@ -231,11 +238,11 @@ nav{
 	background-repeat: repeat;
 	}
 
-	.fa-cogs {
-		color: #ed4d65;
-		font-size: 2.5em;
-		margin-bottom: 20px;
-	}
+.fa-cogs {
+    color: #ed4d65;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
 
 .service-content h3{
 	text-decoration: underline;
@@ -263,11 +270,13 @@ nav{
 	max-width: 1400px;
 	margin: 0 auto;
 	grid-gap: 20px;
-	border: 2px solid #1e020c;
+	border: 1px solid #1e020c;
 	font-size: 1.5em;
     border-radius: 12px;
 	}
-
+.service-pic {
+    width: 50%;
+}
 
 @media screen and (min-width: 666px){
 	#services-content-holder {
@@ -276,6 +285,7 @@ nav{
 	grid-template-rows: auto;
 	grid-gap: 10px;
 	max-width: 1400px;
+    border: 2px solid #1e020c;
 	margin: 0 auto;
 	grid-gap: 20px;
 
@@ -491,7 +501,7 @@ footer p{
 #motivation{
 	display: grid;
 	grid-template-columns: 1fr;
-	background: #1e020c;
+	background: #0b200c;
 	color: white;
 	align-items: center;
 	justify-items: center;
@@ -510,10 +520,11 @@ footer p{
 	margin: 0 auto;
 	font-weight: bold;
     font-family: 'Niconne', cursive;
+    transition: all 1s ease-in-out;
 }
 
 #motivation-contact:hover {
-	background: #983f5a9e;
+	background: #446a46;
 }
 
 #motivation-content h1{
