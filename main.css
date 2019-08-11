@@ -56,8 +56,7 @@ nav ul a:hover{
 	background: #2f2609;
 }
 
-.btn {
-	padding: 2px;
+.nav-bars {
     background: white;
 	display: inline-block;
 	border: 2px solid #c3a505;
@@ -74,11 +73,7 @@ header{
 	display: flex;	
 	flex-direction: column;
 }
-/*
-nav{
-	flex: 0 0 auto;
-}
-*/
+
 
 nav{
 	position: fixed;
@@ -88,11 +83,11 @@ nav{
 }
 
 .banner {
-	flex: 1 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+    height: 100%;
 }
 
 .bonner h1 {
@@ -120,23 +115,31 @@ nav{
     animation-fill-mode: forwards;
 }
 
-.header-link{
-    position: relative;
-    bottom: 70px;
+.header-special-link{
     background: #0b200c;
     border: 2px solid darkgoldenrod;
     border-radius: 10px;
-    transition: all 1s ease-in-out;
-    animation: fromBottom;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+    transition: all 1s ease-in-out;   
     font-size: 35px;
     color: #bfc9bf;
 }
-.header-link:hover{
+.header-special-link:hover{
     color: white;
-    font-size: 45px;
+    font-size: 40px;
 }
+
+#special-link-div{
+    width: 50px;
+    margin: 0 auto;
+    animation: fromBottom;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    position: relative;
+    bottom: 70px;
+    
+}
+
+/*keyframes animations work only for block elements*/
 
 @keyframes fromBottom{
     0%{
@@ -232,33 +235,67 @@ nav{
 
 /*services*/
 .services{
-	padding: 50px;
+	padding: 20px;
 	background-position: cover;
 	background-attachment: fixed;
 	background-repeat: repeat;
 	}
 
 .fa-cogs {
-    color: #ed4d65;
+    color: #140e0e;
     font-size: 2.5em;
     margin-bottom: 20px;
+    padding: 5px;
+    animation: servicesAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes servicesAnimation {
+    0% {
+        transform: rotate(360deg);
+    }
+    50% {
+      
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
 }
 
 .service-content h3{
 	text-decoration: underline;
-    color: #740229;
+}
+.service-content h3 a {
+    color: #18451a;
+}   
+
+.service-content h3 a:hover {
+    color: darkgoldenrod;
+    background: #0b200c;
 }
 
-.service-content p{
+.service-content-info{
 	text-align: left;
     color: #1e020c;
     font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    border-bottom: 2px solid #0b200c;
 }
+
 #service-content-title h1{
-    color: #740229;
+    color: darkgoldenrod;
+    background: #0b200c;
+    padding: 10px;
+    border-top: 4px solid darkgoldenrod;
 }
+
+#service-content-title h1:hover {
+    color: white;
+}
+
 #services-content-holder {
-	background: #ededf373;
 	padding: 10px;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -267,25 +304,78 @@ nav{
 	align-items: start;
 	justify-items: center;
 	text-align: center;
-	max-width: 1400px;
+	max-width: 100%;
 	margin: 0 auto;
 	grid-gap: 20px;
-	border: 1px solid #1e020c;
+
 	font-size: 1.5em;
     border-radius: 12px;
 	}
+
 .service-pic {
-    width: 50%;
+    width: 80%;
+}
+
+.service-pic-div-one{
+    padding: 10px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/event-planing-afea.jpg)center/cover fixed no-repeat;
+    position: relative;
+}
+
+.service-pic-div-two{
+    padding: 10px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/hostessesinred.jpeg)center/cover fixed no-repeat;
+    position: relative;
+}
+
+.service-pic-div-three{
+    padding: 10px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/product-photo-three.jpg)center/cover fixed no-repeat;
+    position: relative;
+}
+
+
+.see-more-link {
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+    font-size: 0.8em;
+    color: white;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.service-pic-div-one:hover .see-more-link {
+    opacity: 1;
+    padding: 2px;
+    background: #0e0d0d4a;
+}
+
+.service-pic-div-two:hover .see-more-link {
+    opacity: 1;
+    padding: 2px;
+    background: #0e0d0d4a;
+}
+
+.service-pic-div-three:hover .see-more-link {
+    opacity: 1;
+    padding: 2px;
+    background: #0e0d0d4a;
+}
+
+.see-more-link:hover {
+    text-decoration: none;
+    color:darkgoldenrod;
 }
 
 @media screen and (min-width: 666px){
 	#services-content-holder {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: auto;
 	grid-gap: 10px;
 	max-width: 1400px;
-    border: 2px solid #1e020c;
+    border: 2px solid #0b200c;
 	margin: 0 auto;
 	grid-gap: 20px;
 
@@ -299,70 +389,6 @@ nav{
 
 /*End services*/
 
-/*Projects*/
-
-.projects{
-	padding: 0 0 100px 0px;
-	background: #f5f3f5;
-}
-
-.title h2{
-	font-size: 40px;
-	text-align: center;
-	text-transform: uppercase;
-	color: #474747;
-}
-
-.title-underline {
-	background: #ad343e;
-	width: 100px;
-	height: 4px;
-	margin: 10px auto;
-}
-
-.title {
-	padding: 50px 0;
-}
-
-
-.project{
-	background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
-	overflow: hidden; /*Prevents the image from stacking over each other during the zoom out*/
-}
- 
-.projects img{
-	width: 100%;
-	display: block;
-	transition: opacity 2s ease, transform 2s ease;
-}
-
-.projects img:hover{
-	opacity: 0.3;
-	cursor: pointer;
-	transform: scale(1.3);
-}
-
-@media screen and (min-width: 576px){ /*smaller screen*/
-	.projects-center {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.project {
-		flex: 0 0 calc(50%);
-	}
-}
-
-@media screen and (min-width: 992px){ /*bigger screen*/
-	.projects-center {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	.project {
-		flex: 0 0 calc(33.333%);
-	}
-}
-
-/*about*/
 
 .about{
 	min-height: 100vh;
@@ -556,53 +582,39 @@ footer p{
 	margin: 0 auto;
 	}
 }
-
 /*End Motivation*/
 
-/*product start*/
-.products {
-	text-align: center;
-	padding: 30px;
+
+/*Events start*/
+
+.review-item {
+    background: rgba(225,225,225,0.7);
+    clip-path:polygon(5% 0,100% 0,90% 100%,0 100%);
 }
 
-#product-grid {
-	color: #474747;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	color: black;
-	grid-gap: 20px;
-	margin: 0 auto;
-	max-width: 1100px;
-	color: black;
-	align-items: center;
-	justify-items: center;
+.review-img{
+    width:100%;
 }
 
-.product-photo{
-	width: 100%;
+#reviews {
+    background: url(img/photo-1520469823575-f989256cf9fc.jpeg)center/cover fixed no-repeat;
 }
 
-.product-element h1{
-	text-transform: uppercase;
-	padding-bottom: 30px;
-	font-size: 2em;
-
+#events-main-header {
+    background: #0509009c;
+    color: darkgoldenrod;
+    transition: all 1s ease-in-out;
 }
 
-#products-title {
-	display: inline;
-	font-size: 2em;
-	text-transform: uppercase;
-	padding-bottom: 30px;
-
+#events-main-header:hover {
+    color: #a19d9d;
+    background: #3a432e9c;
 }
+/*Events end*/
 
 
 
 
-
-
-/*end of products*/
 
 
 
