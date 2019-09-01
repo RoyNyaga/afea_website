@@ -25,13 +25,13 @@
 					</div>
 				</div>
 
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">services</a></li>
-					<li><a href="#">Our  work</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">book online</a></li>
+				<ul class="testing">
+					<li><a class="nav-links" href="#">Home</a></li>
+                    <li><a class="nav-links scrolling-link" href="#services-link">services</a></li>
+					<li><a class="nav-links scrolling-link" href="#about-link">About</a></li>
+					<li><a class="nav-links scrolling-link" href="#reviews">Reviews</a></li>
+					<li><a class="nav-links scrolling-link" href="#contact-link">Contact</a></li>
+					<li><a class="nav-links scrolling-link" href="#contact-link">book online</a></li>
 				</ul>
 
 			</nav>
@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			<div id="special-link-div">
-			    <a href="#special" class="header-special-link">
+			    <a href="#services-link" class="header-special-link scrolling-link">
                 <i class="fas fa-arrow-down"></i>
                 </a>
 			</div>
@@ -78,7 +78,7 @@
 <!--End of Motivation--->
 		
 <!-- services -->
-		<section class="services">
+		<section id= "services-link" class="services">
 		    
 			<div id="services-content-holder">
 			    <div class="service-content" id="service-content-title">
@@ -210,11 +210,12 @@
 <!-- end of events -->
 
 <!-- About section -->
-		<section class="about">
+		<section id="about-link" class="about">
 			<div class="about-card">
-				<h3>About us</h3>
+				<a class="section-links" href="#"><h3>About Us</h3></a>
 				<i class="fas fa-car"></i>
 				<p>kajsdf skdjf ksjdf askdjf ksdjf ksdjf;akj akdjf aksdjf ;askdjf ksdjfa  aksdj askdjf askdfj sdkjfa aksdf asdkfj asdklfj asdkfj lkjsd f akjd;f akdsjf; akjad fkajdsf kjasdklfja; aksjdf;akj askdjf;a i askdjf; iia;sdfkj ;aklsdjf lksdf sakdjf ksdjf kasjdfk askdjfla kasjdflak kasjdf;lak kasjdfla kasjdlf ksjdfla ksajdlf kasjdfl kasdjfa ksajdfla ksdjf;a kajsdf ksdlf kjsd f aksljdf askjdf; salkdfj asldkjf sldkfja ;alsdkfj; ;asldkfj a;sldkfj a;sldkfj ;asldkfj a;skldfj ;asldkfj ;asdkfj ;asdkfj asdkfj asldkfj a;slkdfj ;alsdkjf ;asldkfj ;alsdkfj alsdkfj a;sldkfj a;sdkfj ;asldkfj a;sldkfj a;sldkfj ;alskdfj ;asldkfj a;sldkfj ;saldkfj a;sldkfj ;saldkfj ;sldkfj  aslkdjf a;sldkfj as;dlkfj</p>
+				<a class="section-links" id="section-see-more-link" href="#">see more</a>
 			</div>
 		</section>
 
@@ -228,10 +229,10 @@
 <!-- end of filler section -->
 
 <!-- Contact -->
-		<section class="contact">
+		<section id="contact-link" class="contact">
 			<article class="contact-card">
 				<form>
-					<h3>Contact us</h3>
+					<h3>Leave us a message</h3>
 					<input type="text" id="name" placeholder="Your name">
 					<input type="email" id="email" placeholder="Your email">
 					<textarea name="comment" id="" cols="30" rows="10" placeholder="leave a comment"></textarea>
@@ -244,17 +245,23 @@
 <!-- footer -->
 		<footer>
 			<div class="footer-icons">
-				<a href=""><i class="fab fa-facebook-f"></i></a>
-				<a href=""><i class="fab fa-instagram"></i></a>
-				<a href=""><i class="fab fa-pinterest-p"></i></a>
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+				<a href="#"><i class="fab fa-pinterest-p"></i></a>
 			</div>
-			<p class="copy-right">Copyright&copy;FastAndFaster.All rights reserved</p>
+        <ul id="footer-list">
+            <li class="footer-list-items"><a href="#">Copyright&copy;Organisation AFEA</a></li>
+            <li class="footer-list-items"><a href="#">Designed by It's Tech</a></li>
+            <li class="footer-list-items"><a href="#">Blog</a></li>
+            <li class="footer-list-items"><a href="#">Others</a></li>
+        </ul>
 		</footer>
 <!-- end footer -->
-		<script src="script.js"></script>
+		
 		<script src="jquery-3.4.1.min.js"></script>
 		<script src="bootstrap.bundle.min.js"></script>
 		<script src="magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="script.js"></script>
 		
 	</body>
 </html>
