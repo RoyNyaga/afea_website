@@ -14,14 +14,18 @@ body {
 
 }
 
-nav ul {
+.testing {
 	list-style-type: none;
 	display: none;
+    background: #1304045e;
+}
+
+.toggling {
+    display: block;
 }
 
 nav ul a{
-	display: block;
-	background: #0d1317;
+	display: block;	
 	padding: 20px;
 	font-size: 17px;
 	text-decoration: none;
@@ -387,13 +391,12 @@ nav{
 	grid-column: 1/-1;
 }
 
-/*End services*/
+/*################End services#############*/
 
+/*################about start########################3*/
 
 .about{
-	min-height: 100vh;
-	padding: 100px 0;
-	background: url(img/my-phone-pic1624.jpg)center/cover fixed no-repeat;
+	padding: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -401,19 +404,43 @@ nav{
 }
 
 .about-card{
-	background: rgba(255, 255, 255, 0.6); /*Transparent white*/
 	text-align: center;
 	padding: 60px 40px;
 }
 
+.section-links:hover {
+    text-decoration: none;
+}
+
+#section-see-more-link {
+    font-size: 1.5em;
+    border-top: 4px solid darkgoldenrod;
+    color: darkgoldenrod;
+    background: #0b200c;
+    position: relative;
+    top: 15px;
+}
+
+#section-see-more-link:hover {
+    color: white;
+}
+
 .about-card h3{
 	font-size: 40px;
-	text-transform: capitalize;
+	text-transform: uppercase;
+    color: darkgoldenrod;
+    background: #0b200c;
+    padding: 10px;
+    border-top: 4px solid darkgoldenrod;
+}
+
+.about-card h3:hover {
+    color: white;
 }
 
 .about-card .fa-car{
 	font-size: 60px;
-	color: #ad343e;
+	color: darkgoldenrod;
 	margin: 20px 0;
 }
 
@@ -421,9 +448,10 @@ nav{
 	line-height: 2;
 }
 
+
 @media screen and (min-width: 776px){
 	.about-card{
-		max-width: 50%;
+		max-width: 70%;
 		border-radius: 30px;
 	}
 	.about-card p{
@@ -431,6 +459,8 @@ nav{
 		margin: 0 auto; /* centers the div in question */
 	}
 }
+
+/*################ about end ########################3*/
 
 /*filler*/
 
@@ -442,7 +472,7 @@ nav{
 /*Contact*/
 .contact{
 	min-height: 60vh;
-	background: url(img/editorspick3.jpg)center/cover fixed no-repeat;
+	background: url(img/hostessesinred.jpeg)center/cover fixed no-repeat;
 	display: flex;
 	justify-content: center; /*applies on the flex div*/
 	align-items: center;  /*applies on the divs inside the flex div, it converts the divs to inline-block*/
@@ -503,7 +533,7 @@ textarea::placehoder{
 
 footer {
 	background: #0d1317;
-	padding: 60px 0;
+	padding: 20px 20px 10px 20px;
 	text-align: center;
 }
 
@@ -520,6 +550,19 @@ footer {
 footer p{
 	color: #f5f3f5;
 	font-size: 20px;
+}
+
+.footer-list-items a{
+    color: white;
+}
+
+#footer-list {
+    margin: 0 auto;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
 /*Motivation*/
